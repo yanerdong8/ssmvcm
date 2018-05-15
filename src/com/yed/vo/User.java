@@ -7,6 +7,10 @@ public class User {
 	public int getId() {
 		return id;
 	}
+	@Override
+	public String toString() {
+		return "User [id=" + id + ", name=" + name + ", pwd=" + pwd + "]";
+	}
 	public void setId(int id) {
 		this.id = id;
 	}

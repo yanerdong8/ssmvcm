@@ -24,5 +24,17 @@ public class UserDAOImpl extends SqlSessionDaoSupport implements UserDAO {
 		// TODO Auto-generated method stub
 		return getSqlSession().selectList("com.yed.vo.UserMapper.list");
 	}
+	@Override
+	public int delete(Long id) {
+		// TODO Auto-generated method stub
+		
+		System.out.println("execute dao deleteByPrimaryKey opteration;id=" + id);
+		return getSqlSession().delete("com.yed.vo.UserMapper.delete", id);
+	}
+	@Override
+	public int insert(User user) {
+		// TODO Auto-generated method stub
+		return getSqlSession().insert("com.yed.vo.UserMapper.insertUser", user);
+	}
 
 }

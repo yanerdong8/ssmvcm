@@ -21,5 +21,15 @@ public class UserServiceImpl implements UserService {
 	public List<User> list() {
 		return userDAO.list();
 	}
+	@Override
+	public int delete(Long id) {
+		// TODO Auto-generated method stub
+		return userDAO.delete(id);
+	}
+	@Override
+	public int insert(User user) {
+		// TODO Auto-generated method stub
+		return userDAO.insert(user);
+	}
 
 }
